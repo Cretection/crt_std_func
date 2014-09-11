@@ -39,7 +39,7 @@ $TBE_STYLES['logo_login'] = '../typo3conf/ext/crt_std_func/Resources/Public/Imag
 $TBE_STYLES['inDocStyles_TBEstyle'] .='
 body#typo3-index-php {
 	background: none!importent;
-	background: #27AE60;
+	background: #95A5A6;
 }
 body#typo3-index-php .t3-login-logo {
 	margin: 15px 0;
