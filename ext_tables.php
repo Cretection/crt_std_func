@@ -55,4 +55,9 @@ body#typo3-index-php input.t3-login-submit {
 body#typo3-index-php div#t3-copyright-notice {
 	color: #334455;
 }
+body#typo3-index-php div#t3-copyright-notice a {text-decoration: none;}
+body#typo3-index-php div#t3-copyright-notice a:link {}
+body#typo3-index-php div#t3-copyright-notice a:visited {}
+body#typo3-index-php div#t3-copyright-notice a:hover, a:focus {}
+body#typo3-index-php div#t3-copyright-notice a:active {}
 ';
