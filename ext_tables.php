@@ -39,7 +39,7 @@ $tempColumns = array(
 
 // New icons for the BE
 if (TYPO3_MODE == 'BE') {
-    $icons = array('anchor', 'attach', 'bookAddresses', 'brick', 'bricks', 'calendar', 'chartBar', 'chartOrganisation', 'cog', 'comment', 'email', 'feed',	'layers', 'map', 'newspaper', 'note', 'plugin',	'report', 'scriptCode', 'scriptGear', 'server');
+    $icons = array('anchor', 'attach', 'bookaddresses', 'brick', 'bricks', 'calendar', 'chartBar', 'chartorganisation', 'cog', 'comment', 'email', 'feed',	'layers', 'map', 'newspaper', 'note', 'plugin',	'report', 'scriptcode', 'scriptgear', 'server');
     foreach ($icons as $icon) {
         \TYPO3\CMS\Backend\Sprite\SpriteManager::addTcaTypeIcon(
             'pages',
