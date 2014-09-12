@@ -34,10 +34,27 @@ $tempColumns = array(
 	'tx_crtstdfunc_linktitle',
 	'after:nav_title'
 );
-
-
 \TYPO3\CMS\Backend\Sprite\SpriteManager::addTcaTypeIcon('pages','1111',\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY).'Resources/Public/Backend/Icons/script_gear.png');
 $TCA['pages']['columns']['module']['config']['items'][] = array('Script Gear',1111,\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY).'Resources/Public/Backend/Icons/script_gear.png');
+
+\TYPO3\CMS\Core\Utility\GeneralUtility::loadTCA('pages');
+
+// New icons for the BE
+if (TYPO3_MODE == 'BE') {
+    $icons = array('script_gear', 'bricks', 'chart_organisation', 'cog', 'comment', 'newspaper');
+    foreach ($icons as $icon) {
+        \TYPO3\CMS\Backend\Sprite\SpriteManager::addTcaTypeIcon(
+            'pages',
+            'contains-' . $icon,
+            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Backend/Icons/' . $icon . '.png');
+        $TCA['pages']['columns']['module']['config']['items'][] = array(
+            ucfirst($icon),
+            $icon,
+            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Backend/Icons/' . $icon . '.png'
+        );
+    }
+}
+
 
 $TBE_STYLES['logo_login'] = '../typo3conf/ext/crt_std_func/Resources/Public/Backend/Images/logo.png';
 $TBE_STYLES['inDocStyles_TBEstyle'] .='
