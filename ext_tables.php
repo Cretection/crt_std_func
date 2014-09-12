@@ -34,8 +34,6 @@ $tempColumns = array(
 	'tx_crtstdfunc_linktitle',
 	'after:nav_title'
 );
-\TYPO3\CMS\Backend\Sprite\SpriteManager::addTcaTypeIcon('pages','1111',\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY).'Resources/Public/Backend/Icons/script_gear.png');
-$TCA['pages']['columns']['module']['config']['items'][] = array('Script Gear',1111,\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY).'Resources/Public/Backend/Icons/script_gear.png');
 
 \TYPO3\CMS\Core\Utility\GeneralUtility::loadTCA('pages');
 
@@ -55,7 +53,7 @@ if (TYPO3_MODE == 'BE') {
     }
 }
 
-
+// Change Backend Login Layout
 $TBE_STYLES['logo_login'] = '../typo3conf/ext/crt_std_func/Resources/Public/Backend/Images/logo.png';
 $TBE_STYLES['inDocStyles_TBEstyle'] .='
 body#typo3-index-php {
