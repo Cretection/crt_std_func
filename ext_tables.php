@@ -35,9 +35,11 @@ $tempColumns = array(
 	'after:nav_title'
 );
 
-\TYPO3\CMS\Core\Utility\GeneralUtility::loadTCA('pages');
-\TYPO3\CMS\Backend\Sprite\SpriteManager::addTcaTypeIcon('pages','1111',\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY).'Resources/Public/Backend/Icons/script_gear.png');
-$TCA['pages']['columns']['module']['config']['items'][] = array('Script Gear',1111,\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY).'Resources/Public/Backend/Icons/script_gear.png');
+if (TYPO3_MODE == 'BE') {
+	\TYPO3\CMS\Core\Utility\GeneralUtility::loadTCA('pages');
+	\TYPO3\CMS\Backend\Sprite\SpriteManager::addTcaTypeIcon('pages','1111',\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY).'Resources/Public/Backend/Icons/script_gear.png');
+	$TCA['pages']['columns']['module']['config']['items'][] = array('Script Gear',1111,\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY).'Resources/Public/Backend/Icons/script_gear.png');
+}
 
 $TBE_STYLES['logo_login'] = '../typo3conf/ext/crt_std_func/Resources/Public/Backend/Images/logo.png';
 $TBE_STYLES['inDocStyles_TBEstyle'] .='
