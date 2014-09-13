@@ -21,7 +21,7 @@
             <trans-unit id="tca.pages.module.items.bricks">
 				<source>Bausteine</source>
 			</trans-unit>
-            <trans-unit id="tca.pages.module.items.calender">
+            <trans-unit id="tca.pages.module.items.calendar">
 				<source>Kalender</source>
 			</trans-unit>
             <trans-unit id="tca.pages.module.items.chartbar">
@@ -36,7 +36,7 @@
             <trans-unit id="tca.pages.module.items.email">
 				<source>Emails</source>
 			</trans-unit>
-            <trans-unit id="tca.pages.module.items.feeds">
+            <trans-unit id="tca.pages.module.items.feed">
 				<source>Feeds</source>
 			</trans-unit>
             <trans-unit id="tca.pages.module.items.layers">
