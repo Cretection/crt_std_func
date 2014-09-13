@@ -54,6 +54,8 @@ if (TYPO3_MODE == 'BE') {
 		);
 	}
 }
+// Allow everywhere sys_news
+$TCA['sys_news']['ctrl']['rootLevel'] = 0;
 
 // Change Backend Login Layout
 $TBE_STYLES['logo_login'] = '../typo3conf/ext/crt_std_func/Resources/Public/Backend/Images/logo.png';
