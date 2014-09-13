@@ -6,11 +6,68 @@
 			<trans-unit id="pages.tx_crtstdfunc_linktitle.label">
 				<source>Linktitle</source>
 			</trans-unit>
+            <trans-unit id="tca.pages.module.items.address">
+				<source>Adressen</source>
+			</trans-unit>
+            <trans-unit id="tca.pages.module.items.anchor">
+				<source>Anker</source>
+			</trans-unit>
+            <trans-unit id="tca.pages.module.items.attach">
+				<source>Anhänge</source>
+			</trans-unit>
+            <trans-unit id="tca.pages.module.items.brick">
+				<source>Baustein</source>
+			</trans-unit>
             <trans-unit id="tca.pages.module.items.bricks">
 				<source>Bausteine</source>
 			</trans-unit>
-            <trans-unit id="tca.pages.module.items.bookaddresses">
-				<source>Adressen</source>
+            <trans-unit id="tca.pages.module.items.calender">
+				<source>Kalender</source>
+			</trans-unit>
+            <trans-unit id="tca.pages.module.items.chartbar">
+				<source>Statistiken</source>
+			</trans-unit>
+            <trans-unit id="tca.pages.module.items.cog">
+				<source>Funktionen</source>
+			</trans-unit>
+            <trans-unit id="tca.pages.module.items.comment">
+				<source>Kommentare</source>
+			</trans-unit>
+            <trans-unit id="tca.pages.module.items.email">
+				<source>Emails</source>
+			</trans-unit>
+            <trans-unit id="tca.pages.module.items.feeds">
+				<source>Feeds</source>
+			</trans-unit>
+            <trans-unit id="tca.pages.module.items.layers">
+				<source>Schichten</source>
+			</trans-unit>
+            <trans-unit id="tca.pages.module.items.map">
+				<source>Karten</source>
+			</trans-unit>
+            <trans-unit id="tca.pages.module.items.newspaper">
+				<source>News</source>
+			</trans-unit>
+            <trans-unit id="tca.pages.module.items.note">
+				<source>Notizen</source>
+			</trans-unit>
+            <trans-unit id="tca.pages.module.items.orga">
+				<source>Organisatorisches</source>
+			</trans-unit>
+            <trans-unit id="tca.pages.module.items.plugin">
+				<source>Plugin</source>
+			</trans-unit>
+            <trans-unit id="tca.pages.module.items.report">
+				<source>Berichte</source>
+			</trans-unit>
+            <trans-unit id="tca.pages.module.items.scriptcode">
+				<source>Scripte</source>
+			</trans-unit>
+            <trans-unit id="tca.pages.module.items.scriptgear">
+				<source>Funktionsscripte</source>
+			</trans-unit>
+            <trans-unit id="tca.pages.module.items.server">
+				<source>Server</source>
 			</trans-unit>
 		</body>
 	</file>
