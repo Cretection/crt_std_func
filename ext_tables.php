@@ -57,7 +57,7 @@ $tempColumns = array(
 if (TYPO3_MODE == 'BE') {
 	\TYPO3\CMS\Backend\Sprite\SpriteManager::addTcaTypeIcon(
 		'pages',
-		'bricks',
+		'contains-bricks',
 		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY).'Resources/Public/Backend/Icons/bricks.png'
 	);
 	$TCA['pages']['columns']['module']['config']['items'][] = array('Bricks',bricks,\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY).'Resources/Public/Backend/Icons/bricks.png');
