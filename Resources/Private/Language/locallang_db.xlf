@@ -6,6 +6,12 @@
 			<trans-unit id="pages.tx_crtstdfunc_linktitle.label">
 				<source>Linktitle</source>
 			</trans-unit>
+            <trans-unit id="tca.pages.module.items.bricks">
+				<source>Bausteine</source>
+			</trans-unit>
+            <trans-unit id="tca.pages.module.items.bookaddresses">
+				<source>Adressen</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
