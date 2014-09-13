@@ -35,23 +35,23 @@ $tempColumns = array(
 	'after:nav_title'
 );
 
-\TYPO3\CMS\Core\Utility\GeneralUtility::loadTCA('pages');
+//\TYPO3\CMS\Core\Utility\GeneralUtility::loadTCA('pages');
 
 // New icons for the BE
-if (TYPO3_MODE == 'BE') {
-    $icons = array('anchor', 'attach', 'bookaddresses', 'brick', 'bricks', 'calendar', 'chartBar', 'chartorganisation', 'cog', 'comment', 'email', 'feed',	'layers', 'map', 'newspaper', 'note', 'plugin',	'report', 'scriptcode', 'scriptgear', 'server');
-    foreach ($icons as $icon) {
-        \TYPO3\CMS\Backend\Sprite\SpriteManager::addTcaTypeIcon(
-            'pages',
-            'contains-' . $icon,
-            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Backend/Icons/' . $icon . '.png');
-        $TCA['pages']['columns']['module']['config']['items'][] = array(
-            ucfirst($icon),
-            $icon,
-            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Backend/Icons/' . $icon . '.png'
-        );
-    }
-}
+//if (TYPO3_MODE == 'BE') {
+//    $icons = array('anchor', 'attach', 'bookaddresses', 'brick', 'bricks', 'calendar', 'chartBar', 'chartorganisation', 'cog', 'comment', 'email', 'feed',	'layers', 'map', 'newspaper', 'note', 'plugin',	'report', 'scriptcode', 'scriptgear', 'server');
+//    foreach ($icons as $icon) {
+//        \TYPO3\CMS\Backend\Sprite\SpriteManager::addTcaTypeIcon(
+//            'pages',
+//            'contains-' . $icon,
+//            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Backend/Icons/' . $icon . '.png');
+//        $TCA['pages']['columns']['module']['config']['items'][] = array(
+//            ucfirst($icon),
+//            $icon,
+//            \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Backend/Icons/' . $icon . '.png'
+//        );
+//    }
+//}
 
 // Change Backend Login Layout
 $TBE_STYLES['logo_login'] = '../typo3conf/ext/crt_std_func/Resources/Public/Backend/Images/logo.png';
