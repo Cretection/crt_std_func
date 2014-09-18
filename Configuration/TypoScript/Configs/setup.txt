@@ -60,5 +60,52 @@ Powered by TYPO3 licensed under GNU/GPL - inspiring people to share!
 Implemention by Cretection Web- & Computertechnik - http://www.cretection.eu/
 )
 		}
+		oneLevelMenu = COA
+		oneLevelMenu {
+			wrap = <div class="iefix">|</div>
+			10 = TEXT
+			10 {
+				data = LLL:EXT:crt_std_func/Resources/Private/Language/locallang.xml:oneLevelMenu.nav-main.h2
+				wrap = <h2 class="visuallyhidden">|</h2>
+			}
+			20 = HMENU
+			20 {
+				special = directory
+				special.value = {$plugin.crt_std_func.navigations.main}
+				maxItems = 7
+				1 = TMENU
+				1 {
+					wrap = <ol id="nav-main-ol">|</ol>
+					NO = 1
+					NO {
+						doNotLinkIt = 1
+						wrapItemAndSub = <li class="firstOption">|</li>|*|<li>|</li>|*|<li class="lastOption">|</li>
+						linkWrap = <span class="no">|</span>
+						stdWrap.typolink {
+							parameter.field = uid
+							title.field = tx_crtstdfunc_linktitle // title
+							section = {$plugin.crt_std_func.navigations.section}
+						}
+					}
+					CUR = 1
+					CUR {
+						doNotLinkIt = 1
+						wrapItemAndSub = <li class="firstOption">|</li>|*|<li>|</li>|*|<li class="lastOption">|</li>
+						linkWrap = <span class="cur">|</span>
+					}
+					ACT = 1
+					ACT {
+						doNotLinkIt = 1
+						wrapItemAndSub = <li class="firstOption">|</li>|*|<li>|</li>|*|<li class="lastOption">|</li>
+						linkWrap = <span class="act">|</span>
+						stdWrap.typolink {
+							parameter.field = uid
+							title.field = tx_crtstdfunc_linktitle // title
+							section = {$plugin.crt_std_func.navigations.section}
+						}
+					}
+				}
+			}
+		}
 	}
 }
