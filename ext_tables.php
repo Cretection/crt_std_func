@@ -16,7 +16,7 @@ $tempColumns = array(
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
 	$_EXTKEY,
 	'Configuration/TypoScript/Page',
-	'LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/locallang_db.xlf:configuration.typoscript.page'
+	$_EXTKEY.': Page'
 );
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
 	'pages',
