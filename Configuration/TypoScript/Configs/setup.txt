@@ -44,9 +44,8 @@ plugin {
 			inlineStyle2TempFile = 1
 			metaCharset = utf-8
 			tx_realurl_enable = {$plugin.crt_std_func.config.tx_realurl_enable}
-			htmlTag_setParams = none
+			htmlTag_setParams = class="no-js" lang="de"
 			language = de
-			htmlTag_langKey = de
 			spamProtectEmailAddresses = ascii
 			spamProtectEmailAddresses_atSubst = (at)
 			spamProtectEmailAddresses_lastDotSubst = (punkt)
