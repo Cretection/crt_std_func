@@ -13,6 +13,10 @@ plugin {
 				modernizr = EXT:crt_std_func/Resources/Public/JS/vendor/modernizr-2.8.0.min.js
 			}
 			shortcutIcon = EXT:crt_std_func/Resources/Public/Icons/apple-touch-icon.png
+			10 = TEXT
+			10 {
+				value = Hallo Welt<br>on page.10
+			}
 			includeJSFooterlibs {
 				jquery = //ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js
 				jquery.external = 1
