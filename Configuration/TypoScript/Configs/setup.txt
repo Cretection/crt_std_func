@@ -2,12 +2,6 @@ plugin {
 	tx_crtstdfunc {
 		h5bt = PAGE
 		h5bt {
-			config {
-				headerComment (
-Powered by TYPO3 licensed under GNU/GPL - inspiring people to share!
-Implemention by Cretection Web- & Computertechnik - http://www.cretection.eu/
-)
-			}
 			meta.X-UA-Compatible = IE=edge
 			meta.X-UA-Compatible.httpEquivalent = 1
 			meta.viewport = width=device-width, initial-scale=1
@@ -40,6 +34,31 @@ Implemention by Cretection Web- & Computertechnik - http://www.cretection.eu/
 			includeJSlibs {
 				modernizr = EXT:crt_std_func/Resources/Public/JS/vendor/modernizr-2.8.3_respond-1.4.2.min.js
 			}
+		}
+		config {
+			doctype = html5
+			baseURL = {$plugin.crt_std_func.config.baseURL}
+			prefixLocalAnchors = all
+			no_cache = {$plugin.crt_std_func.config.no_cache}
+			pageTitleFirst = {$plugin.crt_std_func.config.pageTitleFirst}
+			inlineStyle2TempFile = 1
+			metaCharset = utf-8
+			tx_realurl_enable = 1
+			language = de
+			htmlTag_langKey = de
+			spamProtectEmailAddresses = ascii
+			spamProtectEmailAddresses_atSubst = (at)
+			spamProtectEmailAddresses_lastDotSubst = (punkt)
+			locale_all = de_DE
+			meaningfulTempFilePrefix = 0
+			compressJs = 1
+			concatenateJs = 1
+			compressCss = 1
+			concatenateCss = 1
+			headerComment (
+Powered by TYPO3 licensed under GNU/GPL - inspiring people to share!
+Implemention by Cretection Web- & Computertechnik - http://www.cretection.eu/
+)
 		}
 	}
 }
