@@ -15,8 +15,8 @@ $tempColumns = array(
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
 	$_EXTKEY,
-	'Configuration/TypoScript',
-	'Cretection Standard Functions'
+	'Configuration/TypoScript/Page',
+	'LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/locallang_db.xlf:configuration.typoscript.page'
 );
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
 	'pages',
@@ -33,11 +33,6 @@ $tempColumns = array(
 	'title',
 	'tx_crtstdfunc_linktitle',
 	'after:nav_title'
-);
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-	$_EXTKEY,
-	'Configuration/TypoScript/Page',
-	'crt_std_func: Page'
 );
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
