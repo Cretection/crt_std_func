@@ -2,6 +2,12 @@ plugin {
 	tx_crtstdfunc {
 		h5bt = PAGE
 		h5bt {
+			config {
+				headerComment (
+Powered by TYPO3 licensed under GNU/GPL - inspiring people to share!
+Implemention by Cretection Web- & Computertechnik - http://www.cretection.eu/
+)
+			}
 			meta.X-UA-Compatible = IE=edge
 			meta.X-UA-Compatible.httpEquivalent = 1
 			meta.viewport = width=device-width, initial-scale=1
