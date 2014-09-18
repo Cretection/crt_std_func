@@ -1,0 +1,8 @@
+plugin {
+	tx_crtstdfunc {
+		page = PAGE
+		page {
+			
+		}
+	}
+}

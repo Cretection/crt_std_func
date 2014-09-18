@@ -5,7 +5,7 @@ if (!defined('TYPO3_MODE')) {
 $tempColumns = array(
 	'tx_crtstdfunc_linktitle' => array(
 		'exclude' => 1,
-		'label' => 'LLL:EXT:crt_std_func/Resources/Private/Language/locallang_db.xlf:pages.tx_crtstdfunc_linktitle.label',
+		'label' => 'LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/locallang_db.xlf:pages.tx_crtstdfunc_linktitle.label',
 		'config' => array(
 			'type' => 'input',
 			'eval' => 'required',
@@ -34,6 +34,15 @@ $tempColumns = array(
 	'tx_crtstdfunc_linktitle',
 	'after:nav_title'
 );
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+	$_EXTKEY,
+	'Configuration/TypoScript/Page',
+	'crt_std_func: Page'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+	'<INCLUDE_TYPOSCRIPT: source="FILE:EXT:'.$_EXTKEY.'/Configuration/TSConfig/Page/pageTSConfig.ts">'
+);
 
 
 \TYPO3\CMS\Core\Utility\GeneralUtility::loadTCA('pages');
@@ -45,20 +54,22 @@ if (TYPO3_MODE == 'BE') {
 		\TYPO3\CMS\Backend\Sprite\SpriteManager::addTcaTypeIcon(
 			'pages',
 			'contains-'.$icon,
-			\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY).'Resources/Public/Backend/Icons/'.$icon.'.png'
+			\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY).'Resources/Public/Icons/Backend/'.$icon.'.png'
 		);
 		$TCA['pages']['columns']['module']['config']['items'][] = array(
 			'LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/locallang_db.xlf:tca.pages.module.items.'.$icon,
 			$icon,
-			\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY).'Resources/Public/Backend/Icons/'.$icon.'.png'
+			\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY).'Resources/Public/Icons/Backend/'.$icon.'.png'
 		);
 	}
 }
+
 // Allow everywhere sys_news
+\TYPO3\CMS\Core\Utility\GeneralUtility::loadTCA('sys_news');
 $TCA['sys_news']['ctrl']['rootLevel'] = 0;
 
 // Change Backend Login Layout
-$TBE_STYLES['logo_login'] = '../typo3conf/ext/crt_std_func/Resources/Public/Backend/Images/logo.png';
+$TBE_STYLES['logo_login'] = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY).'/Resources/Public/Images/Backend/logo.png';
 $TBE_STYLES['inDocStyles_TBEstyle'] .='
 body#typo3-index-php {
 	background: none!importent;
