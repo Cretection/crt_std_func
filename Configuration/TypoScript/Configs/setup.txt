@@ -43,7 +43,7 @@ plugin {
 			pageTitleFirst = {$plugin.crt_std_func.config.pageTitleFirst}
 			inlineStyle2TempFile = 1
 			metaCharset = utf-8
-			tx_realurl_enable = 1
+			tx_realurl_enable = {$plugin.crt_std_func.config.tx_realurl_enable}
 			language = de
 			htmlTag_langKey = de
 			spamProtectEmailAddresses = ascii
@@ -51,10 +51,10 @@ plugin {
 			spamProtectEmailAddresses_lastDotSubst = (punkt)
 			locale_all = de_DE
 			meaningfulTempFilePrefix = 0
-			compressJs = 1
-			concatenateJs = 1
-			compressCss = 1
-			concatenateCss = 1
+			compressJs = {$plugin.crt_std_func.config.compressJs}
+			concatenateJs = {$plugin.crt_std_func.config.concatenateJs}
+			compressCss = {$plugin.crt_std_func.config.compressCss}
+			concatenateCss = {$plugin.crt_std_func.config.concatenateCss}
 			headerComment (
 Powered by TYPO3 licensed under GNU/GPL - inspiring people to share!
 Implemention by Cretection Web- & Computertechnik - http://www.cretection.eu/
