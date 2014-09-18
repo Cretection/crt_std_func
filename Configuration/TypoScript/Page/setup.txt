@@ -1,8 +1,35 @@
 plugin {
 	tx_crtstdfunc {
-		page = PAGE
-		page {
-			
+		h5bt = PAGE
+		h5bt {
+			meta.X-UA-Compatible = IE=edge
+			meta.X-UA-Compatible.httpEquivalent = 1
+			meta.viewport = width=device-width, initial-scale=1
+			includeCSS {
+				normalize = EXT:crt_std_func/Resources/Public/CSS/normalize.css
+				main = EXT:crt_std_func/Resources/Public/CSS/main.css
+			}
+			includeJSlibs {
+				modernizr = EXT:crt_std_func/Resources/Public/JS/vendor/modernizr-2.8.0.min.js
+			}
+			shortcutIcon = EXT:crt_std_func/Resources/Public/Icons/apple-touch-icon.png
+			includeJSFooterlibs {
+				jquery = //ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js
+				jquery.external = 1
+				jquery.excludeFromConcatenation = 1
+				jquery.disableCompression = 1
+				jquery.forceOnTop = 1
+			}
+			includeJSFooter {
+				plugins = EXT:crt_std_func/Resources/Public/JS/plugins.js
+				main = EXT:crt_std_func/Resources/Public/JS/main.js
+			}
+		}
+		response < plugin.tx_crtstdfunc.h5bt
+		response {
+			includeJSlibs {
+				modernizr = EXT:crt_std_func/Resources/Public/JS/vendor/modernizr-2.8.3_respond-1.4.2.min.js
+			}
 		}
 	}
 }
