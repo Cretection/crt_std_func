@@ -12,7 +12,11 @@ $tempColumns = array(
 		),
 	),
 );
-
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+	$_EXTKEY,
+	'Configuration/TypoScript/Constants',
+	'Constants'
+);
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
 	$_EXTKEY,
 	'Configuration/TypoScript/Page',
