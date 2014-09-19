@@ -6,6 +6,9 @@
 			<trans-unit id="oneLevelMenu.nav-main.h2">
 				<source>Navigation</source>
 			</trans-unit>
+			<trans-unit id="breadcrumbs.headline">
+				<source>Navigation</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

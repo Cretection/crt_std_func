@@ -6,17 +6,19 @@ plugin.crt_std_func {
 		baseURL = 
 		# cat=crt_std_func/config/2; type=boolean; label= Kein Cache: Aktivieren Sie dies, wenn Sie ohne Cache arbeiten möchten (Verlangsamt den Seitenaufbau und benötigt mehr Resourcen).
 		no_cache = 0
-		# cat=crt_std_func/config/3; type=boolean; label= Der Seiten-Title wird vor dem Webseiten-Title angezeigt.
+		# cat=crt_std_func/config/3; type=; label= Der Seiten-Title wird vor dem Webseiten-Title angezeigt.
+		absRefPrefix = /
+		# cat=crt_std_func/config/4; type=boolean; label= Der Seiten-Title wird vor dem Webseiten-Title angezeigt.
 		pageTitleFirst = 1
-		# cat=crt_std_func/config/4; type=boolean; label= Komprimiert JavaScripts.
+		# cat=crt_std_func/config/5; type=boolean; label= Komprimiert JavaScripts.
 		compressJs = 1
-		# cat=crt_std_func/config/5; type=boolean; label= Fügt alle betreffenden JavaScripts zusammen.
+		# cat=crt_std_func/config/6; type=boolean; label= Fügt alle betreffenden JavaScripts zusammen.
 		concatenateJs = 1
-		# cat=crt_std_func/config/6; type=boolean; label= Komprimiert CSS-Files.
+		# cat=crt_std_func/config/7; type=boolean; label= Komprimiert CSS-Files.
 		compressCss = 1
-		# cat=crt_std_func/config/7; type=boolean; label= Fügt alle betreffenden CSS-Files zusammen.
+		# cat=crt_std_func/config/8; type=boolean; label= Fügt alle betreffenden CSS-Files zusammen.
 		concatenateCss = 1
-		# cat=crt_std_func/config/8; type=boolean; label= Aktiviert RealURL.
+		# cat=crt_std_func/config/9; type=boolean; label= Aktiviert RealURL.
 		tx_realurl_enable = 1
 	}
 	#customsubcategory=navigations= Navigationen

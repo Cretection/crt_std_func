@@ -13,6 +13,7 @@ plugin {
 				modernizr = EXT:crt_std_func/Resources/Public/JS/vendor/modernizr-2.8.0.min.js
 			}
 			shortcutIcon = EXT:crt_std_func/Resources/Public/Icons/apple-touch-icon.png
+			bodyTag = <body itemscope itemtype="http://schema.org/WebPage">
 			10 = TEXT
 			10 {
 				value = Hallo Welt<br>on page.10
@@ -39,6 +40,7 @@ plugin {
 			doctype = html5
 			baseURL = {$plugin.crt_std_func.config.baseURL}
 			prefixLocalAnchors = all
+			absRefPrefix = {$plugin.crt_std_func.config.absRefPrefix}
 			no_cache = {$plugin.crt_std_func.config.no_cache}
 			pageTitleFirst = {$plugin.crt_std_func.config.pageTitleFirst}
 			inlineStyle2TempFile = 1
@@ -102,6 +104,56 @@ Implemention by Cretection Web- & Computertechnik - http://www.cretection.eu/
 							parameter.field = uid
 							title.field = tx_crtstdfunc_linktitle // title
 							section = {$plugin.crt_std_func.navigations.section}
+						}
+					}
+				}
+			}
+		}
+		breadcrumbs = COA
+		breadcrumbs {
+			10 = TEXT
+			10 {
+				wrap = <h2>|</h2>
+				data = LLL:EXT:crt_std_func/Resources/Private/Language/locallang.xml:breadcrumbs.headline
+			}
+			20 = COA
+			20 {
+				wrap = <ol id="nav-breadcrumbs-ol">|</ol>
+				10 = HMENU
+				10 {
+					special = rootline
+					special {
+						range = 0 | -1
+					}
+					1 = TMENU
+					1 {
+						NO = 1
+						NO {
+							doNotLinkIt = 1
+							wrapItemAndSub = <li class="firstOption">|</li>|*|<li>|</li>|*|<li class="lastOption">|</li>
+							linkWrap = <span class="no">|</span>
+							stdWrap.typolink {
+								parameter.field = uid
+								title.field = tx_crtstdfunc_linktitle // title
+								section = {$plugin.crt_std_func.navigations.section}
+							}
+						}
+						CUR = 1
+						CUR {
+							doNotLinkIt = 1
+							wrapItemAndSub = <li class="firstOption">|</li>|*|<li>|</li>|*|<li class="lastOption">|</li>
+							linkWrap = <span class="cur">|</span>
+						}
+						ACT = 1
+						ACT {
+							doNotLinkIt = 1
+							wrapItemAndSub = <li class="firstOption">|</li>|*|<li>|</li>|*|<li class="lastOption">|</li>
+							linkWrap = <span class="act">|</span>
+							stdWrap.typolink {
+								parameter.field = uid
+								title.field = tx_crtstdfunc_linktitle // title
+								section = {$plugin.crt_std_func.navigations.section}
+							}
 						}
 					}
 				}
