@@ -8,7 +8,6 @@ $tempColumns = array(
 		'label' => 'LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/locallang_db.xlf:pages.tx_crtstdfunc_linktitle.label',
 		'config' => array(
 			'type' => 'input',
-			'eval' => 'required',
 		),
 	),
 );
