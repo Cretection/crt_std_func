@@ -1,6 +1,5 @@
 <?php
-
-var $extKey = 'crt_std_func';
+$extKey = 'crt_std_func';
 
 if (TYPO3_MODE == 'BE') {
 	// Iconname darf nicht länger als 10 Zeichen sein!
