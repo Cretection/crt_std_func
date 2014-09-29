@@ -68,7 +68,7 @@ Implemention by Cretection Web- & Computertechnik - http://www.cretection.eu/
 			noPageTitle = {$plugin.crt_std_func.config.noPageTitle}
 			no_cache = {$plugin.crt_std_func.config.no_cache}
 			pageTitleFirst = {$plugin.crt_std_func.config.pageTitleFirst}
-			prefixLocalAnchors = all
+			prefixLocalAnchors = {$plugin.crt_std_func.config.prefixLocalAnchors}
 			spamProtectEmailAddresses = ascii
 			spamProtectEmailAddresses_atSubst = (at)
 			spamProtectEmailAddresses_lastDotSubst = (punkt)
