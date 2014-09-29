@@ -69,7 +69,7 @@ if (TYPO3_MODE == 'BE') {
 			\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY).'Resources/Public/Icons/Backend/'.$icon.'.png'
 		);
 		$TCA['pages']['columns']['module']['config']['items'][] = array(
-			'LLL:EXT:'.$extKey.'/Resources/Private/Language/locallang_db.xlf:tca.pages.module.items.'.$icon,
+			'LLL:EXT:'.$_EXTKEY.'/Resources/Private/Language/locallang_db.xlf:tca.pages.module.items.'.$icon,
 			$icon,
 			\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY).'Resources/Public/Icons/Backend/'.$icon.'.png'
 		);
