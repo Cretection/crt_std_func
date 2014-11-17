@@ -29,6 +29,8 @@ plugin.crt_std_func {
 	page {
 		# cat=crt_std_func/page/1; type=; label= Webseiten-Titel als noTrimWrap
 		sitetitle = ||: Cretection Web- & Computertechnik|
+		# cat=crt_std_func/page/2; type=int; label= Startpunkt
+		uid =
 	}
 	#customsubcategory=navigations= Navigationen
 	navigations {

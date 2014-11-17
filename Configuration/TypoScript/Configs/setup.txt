@@ -21,7 +21,7 @@ plugin {
 				main = EXT:crt_std_func/Resources/Public/CSS/main.css
 			}
 			includeJSlibs {
-				modernizr = EXT:crt_std_func/Resources/Public/JS/vendor/modernizr-2.8.0.min.js
+				modernizr = EXT:crt_std_func/Resources/Public/JS/vendor/modernizr-2.8.3.min.js
 			}
 			shortcutIcon = EXT:crt_std_func/Resources/Public/Icons/apple-touch-icon.png
 			bodyTag = <body itemscope itemtype="http://schema.org/WebPage">
