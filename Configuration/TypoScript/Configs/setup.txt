@@ -73,6 +73,7 @@ Implemention by Cretection Web- & Computertechnik - http://www.cretection.eu/
 			spamProtectEmailAddresses_atSubst = (at)
 			spamProtectEmailAddresses_lastDotSubst = (punkt)
 			tx_realurl_enable = {$plugin.crt_std_func.config.tx_realurl_enable}
+			disablePrefixComment = {$plugin.crt_std_func.config.disablePrefixComment}
 		}
 		oneLevelMenu = COA
 		oneLevelMenu {

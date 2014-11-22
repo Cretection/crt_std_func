@@ -24,6 +24,8 @@ plugin.crt_std_func {
 		concatenateCss = 1
 		# cat=crt_std_func/config/11; type=boolean; label= Aktiviert RealURL.
 		tx_realurl_enable = 1
+		# cat=crt_std_func/config/12; type=boolean; label= Deaktiviert die TYPO3 HTML Comments
+		disablePrefixComment = 1
 	}
 	#customsubcategory=page= Page
 	page {
