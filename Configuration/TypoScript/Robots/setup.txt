@@ -1,0 +1,43 @@
+robots = PAGE
+robots {
+	typeNum = 201
+	config {
+		disableAllHeaderCode = 1
+	}
+	10 = TEXT
+	10 {
+		value = User-Agent: *	
+	}
+	20 = TEXT
+	20 {
+		value = Allow: /
+	}
+	30 = TEXT
+	30 {
+		value = Disallow: /cms/
+	}
+	40 = TEXT
+	40 {
+		value = Disallow: /t3lib/
+	}
+	50 = TEXT
+	50 {
+		value = Disallow: /typo3/
+	}
+	60 = TEXT
+	60 {
+		value = Disallow: /typo3conf/
+	}
+	70 = TEXT
+	70 {
+		value = Disallow: /*?id=*
+	}
+	80 = TEXT
+	80 {
+		value = Disallow: /*&type=98
+	}
+	90 = TEXT
+	90 {
+		value = Sitemap: www.cretection.eu/?eID=dd_googlesitemap
+	}
+}

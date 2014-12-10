@@ -21,6 +21,11 @@ $tempColumns = array(
 	'Configuration/TypoScript/Configs',
 	'Configs'
 );
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+	$_EXTKEY,
+	'Configuration/TypoScript/Robots',
+	'Robots'
+);
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
 	'pages',
 	$tempColumns,
