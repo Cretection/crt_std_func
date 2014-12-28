@@ -3,6 +3,7 @@ robots {
 	typeNum = 201
 	config {
 		disableAllHeaderCode = 1
+		additionalHeaders = Content-Type: text/plain
 	}
 	10 = TEXT
 	10 {
