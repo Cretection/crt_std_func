@@ -1,7 +1,35 @@
 plugin {
 	tx_crtstdfunc {
-		h5bt = PAGE
-		h5bt {
+		config {
+			absRefPrefix = {$plugin.tx_crtstdfunc.config.absRefPrefix}
+			baseURL = {$plugin.tx_crtstdfunc.config.baseURL}
+			compressCss = {$plugin.tx_crtstdfunc.config.compressCss}
+			compressJs = {$plugin.tx_crtstdfunc.config.compressJs}
+			concatenateCss = {$plugin.tx_crtstdfunc.config.concatenateCss}
+			concatenateJs = {$plugin.tx_crtstdfunc.config.concatenateJs}
+			doctype = html5
+			htmlTag_setParams = class="no-js" lang="de"
+			inlineStyle2TempFile = 1
+			language = de
+			locale_all = de_DE
+			meaningfulTempFilePrefix = 0
+			metaCharset = utf-8
+			noPageTitle = {$plugin.tx_crtstdfunc.config.noPageTitle}
+			no_cache = {$plugin.tx_crtstdfunc.config.no_cache}
+			pageTitleFirst = {$plugin.tx_crtstdfunc.config.pageTitleFirst}
+			prefixLocalAnchors = {$plugin.tx_crtstdfunc.config.prefixLocalAnchors}
+			spamProtectEmailAddresses = ascii
+			spamProtectEmailAddresses_atSubst = (at)
+			spamProtectEmailAddresses_lastDotSubst = (punkt)
+			tx_realurl_enable = {$plugin.tx_crtstdfunc.config.tx_realurl_enable}
+			disablePrefixComment = {$plugin.tx_crtstdfunc.config.disablePrefixComment}
+			headerComment (
+Powered by TYPO3 licensed under GNU/GPL - inspiring people to share!
+Implemention by Cretection Web- & Computertechnik - http://www.cretection.eu/
+)
+		}
+		h5bp-510 = PAGE
+		h5bp-510 {
 			headerData {
 				10 = COA
 				10 {
@@ -9,167 +37,35 @@ plugin {
 					10 = TEXT
 					10 {
 						field = title
-						noTrimWrap = {$plugin.crt_std_func.page.sitetitle}
+						noTrimWrap = {$plugin.tx_crtstdfunc.h5bp-510.sitetitle}
 					}
 				}
 			}
-			meta.X-UA-Compatible = IE=edge
-			meta.X-UA-Compatible.httpEquivalent = 1
+			meta.x-ua-compatible = ie=edge
+			meta.x-ua-compatible.httpEquivalent = 1
 			meta.viewport = width=device-width, initial-scale=1
 			includeCSS {
-				normalize = EXT:crt_std_func/Resources/Public/CSS/normalize.css
-				main = EXT:crt_std_func/Resources/Public/CSS/main.css
+				normalize = EXT:crt_std_func/Resources/Public/CSS/h5bp-5.1.0/normalize.css
+				main = EXT:crt_std_func/Resources/Public/CSS/h5bp-5.1.0/main.css
 			}
 			includeJSlibs {
-				modernizr = EXT:crt_std_func/Resources/Public/JS/vendor/modernizr-2.8.3.min.js
+				modernizr = EXT:crt_std_func/Resources/Public/JS/h5bp-5.1.0/vendor/modernizr-2.8.3.min.js
 			}
 			shortcutIcon = EXT:crt_std_func/Resources/Public/Icons/apple-touch-icon.png
-			bodyTag = <body itemscope itemtype="http://schema.org/WebPage">
 			10 = TEXT
 			10 {
-				value = Hallo Welt<br>on page.10
+				value = Hallo Welt on page.10
 			}
 			includeJSFooterlibs {
-				jquery = //ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js
+				jquery = //ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js
 				jquery.external = 1
 				jquery.excludeFromConcatenation = 1
 				jquery.disableCompression = 1
 				jquery.forceOnTop = 1
 			}
 			includeJSFooter {
-				plugins = EXT:crt_std_func/Resources/Public/JS/plugins.js
-				main = EXT:crt_std_func/Resources/Public/JS/main.js
-			}
-		}
-		response < plugin.tx_crtstdfunc.h5bt
-		response {
-			includeJSlibs {
-				modernizr = EXT:crt_std_func/Resources/Public/JS/vendor/modernizr-2.8.3_respond-1.4.2.min.js
-			}
-		}
-		config {
-			absRefPrefix = {$plugin.crt_std_func.config.absRefPrefix}
-			baseURL = {$plugin.crt_std_func.config.baseURL}
-			compressCss = {$plugin.crt_std_func.config.compressCss}
-			compressJs = {$plugin.crt_std_func.config.compressJs}
-			concatenateCss = {$plugin.crt_std_func.config.concatenateCss}
-			concatenateJs = {$plugin.crt_std_func.config.concatenateJs}
-			doctype = html5
-			headerComment (
-Powered by TYPO3 licensed under GNU/GPL - inspiring people to share!
-Implemention by Cretection Web- & Computertechnik - http://www.cretection.eu/
-)
-			htmlTag_setParams = class="no-js" lang="de"
-			inlineStyle2TempFile = 1
-			language = de
-			locale_all = de_DE
-			meaningfulTempFilePrefix = 0
-			metaCharset = utf-8
-			noPageTitle = {$plugin.crt_std_func.config.noPageTitle}
-			no_cache = {$plugin.crt_std_func.config.no_cache}
-			pageTitleFirst = {$plugin.crt_std_func.config.pageTitleFirst}
-			prefixLocalAnchors = {$plugin.crt_std_func.config.prefixLocalAnchors}
-			spamProtectEmailAddresses = ascii
-			spamProtectEmailAddresses_atSubst = (at)
-			spamProtectEmailAddresses_lastDotSubst = (punkt)
-			tx_realurl_enable = {$plugin.crt_std_func.config.tx_realurl_enable}
-			disablePrefixComment = {$plugin.crt_std_func.config.disablePrefixComment}
-		}
-		oneLevelMenu = COA
-		oneLevelMenu {
-			wrap = <div class="iefix">|</div>
-			10 = TEXT
-			10 {
-				data = LLL:EXT:crt_std_func/Resources/Private/Language/locallang.xml:oneLevelMenu.nav-main.h2
-				wrap = <h2 class="visuallyhidden">|</h2>
-			}
-			20 = HMENU
-			20 {
-				special = directory
-				special.value = {$plugin.crt_std_func.navigations.main}
-				maxItems = 7
-				1 = TMENU
-				1 {
-					wrap = <ol id="nav-main-ol">|</ol>
-					NO = 1
-					NO {
-						doNotLinkIt = 1
-						wrapItemAndSub = <li class="firstOption">|</li>|*|<li>|</li>|*|<li class="lastOption">|</li>
-						linkWrap = <span class="no">|</span>
-						stdWrap.typolink {
-							parameter.field = uid
-							title.field = tx_crtstdfunc_linktitle // title
-							section = {$plugin.crt_std_func.navigations.section}
-						}
-					}
-					CUR = 1
-					CUR {
-						doNotLinkIt = 1
-						wrapItemAndSub = <li class="firstOption">|</li>|*|<li>|</li>|*|<li class="lastOption">|</li>
-						linkWrap = <span class="cur">|</span>
-					}
-					ACT = 1
-					ACT {
-						doNotLinkIt = 1
-						wrapItemAndSub = <li class="firstOption">|</li>|*|<li>|</li>|*|<li class="lastOption">|</li>
-						linkWrap = <span class="act">|</span>
-						stdWrap.typolink {
-							parameter.field = uid
-							title.field = tx_crtstdfunc_linktitle // title
-							section = {$plugin.crt_std_func.navigations.section}
-						}
-					}
-				}
-			}
-		}
-		breadcrumbs = COA
-		breadcrumbs {
-			10 = TEXT
-			10 {
-				wrap = <h2>|</h2>
-				data = LLL:EXT:crt_std_func/Resources/Private/Language/locallang.xml:breadcrumbs.headline
-			}
-			20 = COA
-			20 {
-				wrap = <ol id="nav-breadcrumbs-ol">|</ol>
-				10 = HMENU
-				10 {
-					special = rootline
-					special {
-						range = 0 | -1
-					}
-					1 = TMENU
-					1 {
-						NO = 1
-						NO {
-							doNotLinkIt = 1
-							wrapItemAndSub = <li class="firstOption">|</li>|*|<li>|</li>|*|<li class="lastOption">|</li>
-							linkWrap = <span class="no">|</span>
-							stdWrap.typolink {
-								parameter.field = uid
-								title.field = tx_crtstdfunc_linktitle // title
-								section = {$plugin.crt_std_func.navigations.section}
-							}
-						}
-						CUR = 1
-						CUR {
-							doNotLinkIt = 1
-							wrapItemAndSub = <li class="firstOption">|</li>|*|<li>|</li>|*|<li class="lastOption">|</li>
-							linkWrap = <span class="cur">|</span>
-						}
-						ACT = 1
-						ACT {
-							doNotLinkIt = 1
-							wrapItemAndSub = <li class="firstOption">|</li>|*|<li>|</li>|*|<li class="lastOption">|</li>
-							linkWrap = <span class="act">|</span>
-							stdWrap.typolink {
-								parameter.field = uid
-								title.field = tx_crtstdfunc_linktitle // title
-								section = {$plugin.crt_std_func.navigations.section}
-							}
-						}
-					}
-				}
+				plugins = EXT:crt_std_func/Resources/Public/JS/h5bp-5.1.0/plugins.js
+				main = EXT:crt_std_func/Resources/Public/JS/h5bp-5.1.0/main.js
 			}
 		}
 	}

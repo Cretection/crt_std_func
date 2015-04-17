@@ -1,5 +1,5 @@
 #customcategory=crt_std_func= Standard Funktionen
-plugin.crt_std_func {
+plugin.tx_crtstdfunc {
 	#customsubcategory=config= Configuration
 	config {
 		# cat=crt_std_func/config/1; type=; label= BaseURL: Die Angabe der Dateibasis erfolgt im Dateikopf und dem genauen URI der Datei.
@@ -28,7 +28,7 @@ plugin.crt_std_func {
 		disablePrefixComment = 1
 	}
 	#customsubcategory=page= Page
-	page {
+	h5bp-510 {
 		# cat=crt_std_func/page/1; type=; label= Webseiten-Titel als noTrimWrap
 		sitetitle = ||: Cretection Web- & Computertechnik|
 		# cat=crt_std_func/page/2; type=int; label= Startpunkt
