@@ -63,7 +63,7 @@ foreach ($recordTypes as $recordType) {
         include_once ($configurationFile);
     }
 }
-\TYPO3\CMS\Core\Utility\GeneralUtility::loadTCA('pages');
+//\TYPO3\CMS\Core\Utility\GeneralUtility::loadTCA('pages');
 if (TYPO3_MODE == 'BE') {
 	// Iconname darf nicht länger als 10 Zeichen sein!
 	$icons = array('address', 'anchor', 'attach', 'brick', 'bricks', 'calendar', 'chartbar', 'cog', 'comment', 'email', 'feed', 'layers', 'map', 'newspaper', 'note', 'orga', 'plugin', 'report', 'scriptcode', 'scriptgear', 'server');
