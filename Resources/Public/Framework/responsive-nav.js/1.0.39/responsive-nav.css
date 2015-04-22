@@ -1,12 +1,14 @@
 /*! responsive-nav.js 1.0.39 by @viljamis */
 
-.nav-collapse ul {
+.nav-collapse ul,
+.nav-collapse ol {
   margin: 0;
   padding: 0;
   width: 100%;
   display: block;
   list-style: none;
 }
+/* Added .nav-collapse ol */
 
 .nav-collapse li {
   width: 100%;
