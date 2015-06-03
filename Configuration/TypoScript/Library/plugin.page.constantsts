@@ -1,6 +1,6 @@
 plugin.tx_crtstdfunc {
 	#customsubcategory=page= Page
-	h5bp-510 {
+	page {
 		# cat=crt_std_func/page/1; type=; label= Webseiten-Titel als noTrimWrap
 		sitetitle = ||: Cretection Web- & Computertechnik|
 		# cat=crt_std_func/page/2; type=int; label= Startpunkt

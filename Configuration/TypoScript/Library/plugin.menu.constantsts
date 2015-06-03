@@ -1,0 +1,20 @@
+plugin {
+	tx_crtstdfunc {
+		#customsubcategory=navigations= Navigationen
+		menu {
+			#customsubcategory=breadcrumb= Breadcrumb
+			breadcrumb {
+				# cat=crt_std_func/navigations/breadcrumb/1; type=int; label= Crop Limit: Crop Limit setzten.
+				cropLimit = 20
+				# cat=crt_std_func/navigations/breadcrumb/2; type=string; label= Crop String: Crop String.
+				cropString = ...
+				idPrefix = breadcrumb-level-
+				staticAttributes = itemscope itemtype="http://data-vocabulary.org/Breadcrumb"
+				currentClass = current
+				levelClassPrefix = lvl-
+				ATagWrap = |
+				staticATagParams = itemprop="url"
+			}
+		}
+	}
+}

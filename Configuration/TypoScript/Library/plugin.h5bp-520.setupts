@@ -1,7 +1,7 @@
 plugin {
 	tx_crtstdfunc {
-		h5bp-510 = PAGE
-		h5bp-510 {
+		h5bp-520 = PAGE
+		h5bp-520 {
 			headerData {
 				10 = COA
 				10 {
@@ -17,27 +17,27 @@ plugin {
 			meta.x-ua-compatible.httpEquivalent = 1
 			meta.viewport = width=device-width, initial-scale=1
 			includeCSS {
-				normalize = EXT:crt_std_func/Resources/Public/Framework/h5bp/5.1.0/Css/normalize.css
-				main = EXT:crt_std_func/Resources/Public/Framework/h5bp/5.1.0/Css/main.css
+				normalize = EXT:crt_std_func/Resources/Public/Framework/h5bp/5.2.0/Css/normalize.css
+				main = EXT:crt_std_func/Resources/Public/Framework/h5bp/5.2.0/Css/main.css
 			}
 			includeJSlibs {
-				modernizr = EXT:crt_std_func/Resources/Public/Framework/h5bp/5.1.0/Js/vendor/modernizr-2.8.3.min.js
+				modernizr = EXT:crt_std_func/Resources/Public/Framework/h5bp/5.2.0/Js/vendor/modernizr-2.8.3.min.js
 			}
-			shortcutIcon = EXT:crt_std_func/Resources/Public/Framework/h5bp/5.1.0/Icons/apple-touch-icon.png
+			shortcutIcon = EXT:crt_std_func/Resources/Public/Framework/h5bp/5.2.0/Icons/apple-touch-icon.png
 			10 = TEXT
 			10 {
 				value = Hallo Welt on page.10
 			}
 			includeJSFooterlibs {
-				jquery = //ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js
+				jquery = //ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js
 				jquery.external = 1
 				jquery.excludeFromConcatenation = 1
 				jquery.disableCompression = 1
 				jquery.forceOnTop = 1
 			}
 			includeJSFooter {
-				plugins = EXT:crt_std_func/Resources/Public/Framework/h5bp/5.1.0/Js/plugins.js
-				main = EXT:crt_std_func/Resources/Public/Framework/h5bp/5.1.0/Js/main.js
+				plugins = EXT:crt_std_func/Resources/Public/Framework/h5bp/5.2.0/Js/plugins.js
+				main = EXT:crt_std_func/Resources/Public/Framework/h5bp/5.2.0/Js/main.js
 			}
 		}
 	}

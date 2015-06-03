@@ -1,0 +1,183 @@
+# Breadcrumbs with itemscope
+#
+# Constants:
+#
+# Usage:
+# <f:cObject typoscriptObjectPath="lib.menu.breadcrumb"/>
+#
+plugin {
+	tx_crtstdfunc {
+		menu {
+			breadcrumb = COA
+			breadcrumb {
+				wrap = <nav role="navigation" itemprop="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">|</nav>
+				10 = TEXT
+				10 {
+					value = Breadcrumbs
+					wrap = <meta itemprop="name" content="|"/>
+				}
+				20 = TEXT
+				30 = HMENU
+				30 {
+					stdWrap.wrap = <ul itemprop="itemListElement">|</ul>
+					special = rootline
+					special.range = 0|-1
+					entryLevel = 0
+					1 = TMENU
+					1 {
+						NO {
+							linkWrap = {$plugin.tx_crtstdfunc.menu.breadcrumb.ATagWrap}
+							stdWrap {
+								crop = {$plugin.tx_crtstdfunc.menu.breadcrumb.cropLimit}|{$plugin.tx_crtstdfunc.menu.breadcrumb.cropString}
+							}
+							stdWrap2 {
+								cObject = COA
+								cObject {
+									10 = TEXT
+									10 {
+										value = <li
+										stdWrap {
+											noTrimWrap = ^^ ^
+											noTrimWrap {
+												splitChar = ^
+											}
+										}
+									}
+									20 = TEXT
+									20 {
+										value = {$plugin.tx_crtstdfunc.menu.breadcrumb.idPrefix}{register:count_HMENU_MENUOBJ}
+										insertData = 1
+										noTrimWrap = ^id="^" ^
+										noTrimWrap {
+											splitChar = ^
+										}
+									}
+									30 = COA
+									30 {
+										stdWrap {
+											trim = 1
+											noTrimWrap = | class="|" |
+										}
+										10 = TEXT
+										10 {
+											value = {$plugin.tx_crtstdfunc.menu.breadcrumb.levelClassPrefix}{register:count_HMENU_MENUOBJ}
+											insertData = 1
+											noTrimWrap = ^^ ^
+											noTrimWrap {
+												splitChar = ^
+											}
+										}
+									}
+									40 = COA
+									40 {
+										stdWrap {
+											trim = 1
+										}
+										10 = TEXT
+										10 {
+											value = {$plugin.tx_crtstdfunc.menu.breadcrumb.staticAttributes}
+											stdWrap {
+												noTrimWrap = ^^ ^
+												noTrimWrap {
+													splitChar = ^
+												}
+											}
+										}
+										20 = TEXT
+										20 {
+											value = itemprop="child"
+											stdWrap {
+												noTrimWrap = ^^ ^
+												noTrimWrap {
+													splitChar = ^
+												}
+											}
+											if {
+												value {
+													data = register: count_HMENU_MENUOBJ
+												}
+												equals = 1
+												negate = 1
+											}
+										}
+										30 = TEXT
+										30 {
+											value {
+												cObject = COA
+												cObject {
+													wrap = itemref="|"
+													10 = TEXT
+													10 {
+														value = {register:count_HMENU_MENUOBJ} + 1
+														value {
+															insertData = 1
+														}
+														prioriCalc = 1
+														wrap = {$plugin.tx_crtstdfunc.menu.breadcrumb.idPrefix}|
+													}
+												}
+											}
+											stdWrap {
+												noTrimWrap = ^^ ^
+												noTrimWrap {
+													splitChar = ^
+												}
+											}
+											if {
+												value {
+													data = register: count_HMENU_MENUOBJ
+												}
+												equals {
+													data = register: count_menuItems
+												}
+												negate = 1
+											}
+										}
+									}
+									50 = TEXT
+									50 {
+										value =  >|</li>
+									}
+								}
+								insertData = 1
+							}
+							ATagParams = {$plugin.tx_crtstdfunc.menu.breadcrumb.staticATagParams}
+							ATagBeforeWrap = 1
+						}
+						CUR = 1
+						CUR {
+							linkWrap = <span itemprop="title">|</span>
+							stdWrap2 {
+								cObject < lib.menu.breadcrumbs.30.1.NO.stdWrap2.cObject
+								cObject {
+									30 {
+										20 = TEXT
+										20 {
+											value = {$plugin.tx_crtstdfunc.menu.breadcrumb.currentClass}
+											noTrimWrap = | ||
+										}
+										doNotLinkIt = 1
+										ATagParams = {$plugin.tx_crtstdfunc.menu.breadcrumb.staticATagParams}
+									}
+								}
+							}
+						}
+					}
+					15 = LOAD_REGISTER
+					15 {
+						manualMenuCounter {
+							cObject  = TEXT
+							cObject {
+								value = {register:count_HMENU_MENUOBJ} + 1
+								value {
+									insertData = 1
+								}
+								prioriCalc = 1
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
