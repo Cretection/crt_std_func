@@ -27,20 +27,4 @@ plugin.tx_crtstdfunc {
 		# cat=crt_std_func/config/12; type=boolean; label= Deaktiviert die TYPO3 HTML Comments
 		disablePrefixComment = 1
 	}
-	#customsubcategory=page= Page
-	h5bp-510 {
-		# cat=crt_std_func/page/1; type=; label= Webseiten-Titel als noTrimWrap
-		sitetitle = ||: Cretection Web- & Computertechnik|
-		# cat=crt_std_func/page/2; type=int; label= Startpunkt
-		uid =
-	}
-	#customsubcategory=navigations= Navigationen
-	navigations {
-		# cat=crt_std_func/navigations/1; type=int; label= Startpunkt Navigation: Startpunkt der Navigation sowie der Subnavigation.
-		main = 
-		# cat=crt_std_func/navigations/2; type=int; label= Startpunkt globale Navigation: Startpunkt der globalen Navigation.
-		global = 
-		# cat=crt_std_func/navigations/3; type=; label= Anker: welcher bei jedem Menüpunkt aufruf mit angehängt wird.
-		section =
-	}
 }

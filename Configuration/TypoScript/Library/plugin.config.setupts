@@ -1,0 +1,32 @@
+plugin {
+	tx_crtstdfunc {
+		config {
+			absRefPrefix = {$plugin.tx_crtstdfunc.config.absRefPrefix}
+			baseURL = {$plugin.tx_crtstdfunc.config.baseURL}
+			compressCss = {$plugin.tx_crtstdfunc.config.compressCss}
+			compressJs = {$plugin.tx_crtstdfunc.config.compressJs}
+			concatenateCss = {$plugin.tx_crtstdfunc.config.concatenateCss}
+			concatenateJs = {$plugin.tx_crtstdfunc.config.concatenateJs}
+			doctype = html5
+			htmlTag_setParams = class="no-js" lang="de"
+			inlineStyle2TempFile = 1
+			language = de
+			locale_all = de_DE
+			meaningfulTempFilePrefix = 0
+			metaCharset = utf-8
+			noPageTitle = {$plugin.tx_crtstdfunc.config.noPageTitle}
+			no_cache = {$plugin.tx_crtstdfunc.config.no_cache}
+			pageTitleFirst = {$plugin.tx_crtstdfunc.config.pageTitleFirst}
+			prefixLocalAnchors = {$plugin.tx_crtstdfunc.config.prefixLocalAnchors}
+			spamProtectEmailAddresses = ascii
+			spamProtectEmailAddresses_atSubst = (at)
+			spamProtectEmailAddresses_lastDotSubst = (punkt)
+			tx_realurl_enable = {$plugin.tx_crtstdfunc.config.tx_realurl_enable}
+			disablePrefixComment = {$plugin.tx_crtstdfunc.config.disablePrefixComment}
+			headerComment (
+Powered by TYPO3 licensed under GNU/GPL - inspiring people to share!
+Implemention by Cretection Web- & Computertechnik - http://www.cretection.eu/
+)
+		}
+	}
+}

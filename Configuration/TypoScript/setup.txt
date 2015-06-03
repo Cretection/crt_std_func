@@ -1,0 +1,1 @@
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:crt_std_func/Configuration/TypoScript/Library" extensions="setupts">
