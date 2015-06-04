@@ -1,4 +1,4 @@
-#customcategory=crt_std_func= Standard Funktionen
+#customcategory=crt_std_func= Std Func: Configuration
 plugin.tx_crtstdfunc {
 	#customsubcategory=config= Configuration
 	config {

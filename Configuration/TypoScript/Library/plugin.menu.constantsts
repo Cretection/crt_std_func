@@ -1,8 +1,17 @@
+#customcategory=crt_std_func= Std Func: Menu
 plugin {
 	tx_crtstdfunc {
 		#customsubcategory=navigations= Navigationen
 		menu {
-			#customsubcategory=breadcrumb= Breadcrumb
+			# cat=crt_std_func/navigations/1; type=int; label= Startpunkt Navigation: Startpunkt der Navigation sowie der Subnavigation.
+			main = 
+			# cat=crt_std_func/navigations/2; type=int; label= Startpunkt globale Navigation: Startpunkt der globalen Navigation.
+			global = 
+			# cat=crt_std_func/navigations/3; type=; label= Anker: welcher bei jedem Menüpunkt aufruf mit angehängt wird.
+			section =
+		}
+		#customsubcategory=breadcrumb= Breadcrumb
+		menu {
 			breadcrumb {
 				# cat=crt_std_func/navigations/breadcrumb/1; type=int; label= Crop Limit: Crop Limit setzten.
 				cropLimit = 20
