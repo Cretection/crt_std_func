@@ -1,32 +1,31 @@
-#customcategory=crt_std_func= Std Func: Menu
-plugin {
-	tx_crtstdfunc {
-		#customsubcategory=navigations= Navigationen
-		menu {
-			# cat=crt_std_func/navigations/1; type=int; label= Startpunkt Navigation: Startpunkt der Navigation sowie der Subnavigation.
-			main = 
-			# cat=crt_std_func/navigations/2; type=int; label= Startpunkt globale Navigation: Startpunkt der globalen Navigation.
-			global = 
-			# cat=crt_std_func/navigations/3; type=; label= Anker: welcher bei jedem Menüpunkt aufruf mit angehängt wird.
-			section =
-		}
-		#customsubcategory=breadcrumb= Breadcrumb
-		menu {
-			breadcrumb {
-				# cat=crt_std_func/breadcrumb/1; type=int; label= Crop Limit: Crop Limit setzten.
-				cropLimit = 20
-				# cat=crt_std_func/breadcrumb/2; type=string; label= Crop String: Crop String.
-				cropString = ...
-				# cat=crt_std_func/breadcrumb/3; type=string; label= Prefix ID: Prefix for IDs.
-				idPrefix = breadcrumb-level-
-				# cat=crt_std_func/breadcrumb/4; type=string; label= static Attributes: static Attributes.
-				staticAttributes = itemscope itemtype="http://data-vocabulary.org/Breadcrumb"
-				# cat=crt_std_func/breadcrumb/5; type=string; label= Current Class: Add this class to current link.
-				currentClass = current
-				levelClassPrefix = lvl-
-				ATagWrap = |
-				staticATagParams = itemprop="url"
-			}
-		}
+#customcategory=crt_std_func= Std Func: Menus
+plugin.tx_crtstdfunc {
+	#customsubcategory=navigations= Navigationen
+	menu {
+		# cat=crt_std_func/navigations/1; type=int; label= Startpunkt Navigation: Startpunkt der Navigation sowie der Subnavigation.
+		main = 
+		# cat=crt_std_func/navigations/2; type=int; label= Startpunkt globale Navigation: Startpunkt der globalen Navigation.
+		global = 
+		# cat=crt_std_func/navigations/3; type=; label= Anker: welcher bei jedem Menüpunkt aufruf mit angehängt wird.
+		section =
+	}
+	#customsubcategory=breadcrumb= Breadcrumb
+	menu.breadcrumb {
+		# cat=crt_std_func/breadcrumb/1; type=int; label= Crop Limit: Crop Limit setzten.
+		cropLimit = 20
+		# cat=crt_std_func/breadcrumb/2; type=string; label= Crop String: Crop String.
+		cropString = ...
+		# cat=crt_std_func/breadcrumb/3; type=string; label= Prefix ID: Prefix for IDs.
+		idPrefix = breadcrumb-level-
+		# cat=crt_std_func/breadcrumb/4; type=string; label= static Attributes: static Attributes.
+		staticAttributes = itemscope itemtype="http://data-vocabulary.org/Breadcrumb"
+		# cat=crt_std_func/breadcrumb/5; type=string; label= Current Class: Add this class to current link.
+		currentClass = current
+		# cat=crt_std_func/breadcrumb/6; type=string; label= Level Class Prefix: Add Level Class Prefix.
+		levelClassPrefix = lvl-
+		# cat=crt_std_func/breadcrumb/7; type=string; label= ATagWrap: Add this wrap to A-Tags.
+		ATagWrap = |
+		# cat=crt_std_func/breadcrumb/8; type=string; label= static A-Tag Params: Add this Parms to A-Tags.
+		staticATagParams = itemprop="url"
 	}
 }
