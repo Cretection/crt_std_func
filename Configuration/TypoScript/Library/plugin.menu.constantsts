@@ -13,12 +13,15 @@ plugin {
 		#customsubcategory=breadcrumb= Breadcrumb
 		menu {
 			breadcrumb {
-				# cat=crt_std_func/navigations/breadcrumb/1; type=int; label= Crop Limit: Crop Limit setzten.
+				# cat=crt_std_func/breadcrumb/1; type=int; label= Crop Limit: Crop Limit setzten.
 				cropLimit = 20
-				# cat=crt_std_func/navigations/breadcrumb/2; type=string; label= Crop String: Crop String.
+				# cat=crt_std_func/breadcrumb/2; type=string; label= Crop String: Crop String.
 				cropString = ...
+				# cat=crt_std_func/breadcrumb/3; type=string; label= Prefix ID: Prefix for IDs.
 				idPrefix = breadcrumb-level-
+				# cat=crt_std_func/breadcrumb/4; type=string; label= static Attributes: static Attributes.
 				staticAttributes = itemscope itemtype="http://data-vocabulary.org/Breadcrumb"
+				# cat=crt_std_func/breadcrumb/5; type=string; label= Current Class: Add this class to current link.
 				currentClass = current
 				levelClassPrefix = lvl-
 				ATagWrap = |
