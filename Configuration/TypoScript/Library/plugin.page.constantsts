@@ -1,4 +1,4 @@
-#customcategory=crt_std_func= Std Func: Page
+#customcategory=crt_std_func= StdFunc: Page
 plugin.tx_crtstdfunc {
 	#customsubcategory=page= Page
 	page {

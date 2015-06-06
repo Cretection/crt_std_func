@@ -1,0 +1,17 @@
+plugin.tx_crtstdfunc.menu.main = COA
+plugin.tx_crtstdfunc.menu.main {
+	wrap = <nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">|</nav>
+	10 = TEXT
+	10 {
+		data = LLL:EXT:crt_std_func/Resources/Private/Language/locallang.xlf:library.menu.main.10.value
+		wrap = <h2 class="visuallyhidden">|</h2>
+	}
+	20 = HMENU
+	20 {
+		special = directory
+		special {
+			value = {$plugin.tx_crtstdfunc.menu.main}
+		}
+		maxItems = 7
+	}
+}

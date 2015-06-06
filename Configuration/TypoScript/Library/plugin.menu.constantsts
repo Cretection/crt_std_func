@@ -1,4 +1,4 @@
-#customcategory=crt_std_func= Std Func: Menus
+#customcategory=crt_std_func= StdFunc: Menus
 plugin.tx_crtstdfunc {
 	#customsubcategory=navigations= Navigationen
 	menu {
