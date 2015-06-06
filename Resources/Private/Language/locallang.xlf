@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-07-05T10:22:27Z" product-name="crt_std_func">
+		<header/>
+		<body>
+			<trans-unit id="library.menu.main.10.value" xml:space="preserve">
+				<source>Main navigation</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
