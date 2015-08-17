@@ -12,7 +12,7 @@ plugin {
 			inlineStyle2TempFile = 1
 			language = de
 			locale_all = de_DE
-			meaningfulTempFilePrefix = 0
+			meaningfulTempFilePrefix = {$plugin.tx_crtstdfunc.config.meaningfulTempFilePrefix}
 			metaCharset = utf-8
 			noPageTitle = {$plugin.tx_crtstdfunc.config.noPageTitle}
 			no_cache = {$plugin.tx_crtstdfunc.config.no_cache}
@@ -23,6 +23,8 @@ plugin {
 			spamProtectEmailAddresses_lastDotSubst = (punkt)
 			tx_realurl_enable = {$plugin.tx_crtstdfunc.config.tx_realurl_enable}
 			disablePrefixComment = {$plugin.tx_crtstdfunc.config.disablePrefixComment}
+			typolinkCheckRootline = {$plugin.tx_crtstdfunc.config.typolinkCheckRootline}
+			typolinkEnableLinksAcrossDomains = {$plugin.tx_crtstdfunc.config.typolinkEnableLinksAcrossDomains}
 			headerComment (
 Powered by TYPO3 licensed under GNU/GPL - inspiring people to share!
 Implemention by Cretection Web- & Computertechnik - http://www.cretection.eu/
